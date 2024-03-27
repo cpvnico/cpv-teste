@@ -10,7 +10,7 @@
 }
 
 body{
-    background-color: rgb(228, 224, 241);
+    background-color: rgb(241, 238, 224);
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
@@ -18,7 +18,7 @@ body{
 }
 
 main.container{
-    position: absolute;
+    position: fixed;
     top: 20%;
     min-width: 350px;
     min-height: 40vh;
@@ -173,4 +173,11 @@ form{
 #captcha{
     position: relative;
     margin-top: 1rem;
+}
+
+#resolv{
+    position: fixed;
+    top: 20%;
+    z-index: 10;
+    transform: translateY(+920%) translateX(-118%);
 }
