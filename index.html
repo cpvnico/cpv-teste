@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Comprovante</title>
+    <script src="https://unpkg.com/pdf-lib@1.4.0"></script>
+    <script src="https://unpkg.com/downloadjs@1.4.7"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.2.6/jquery.inputmask.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-maskmoney/3.0.2/jquery.maskMoney.min.js"></script>
+    <link rel="icon" type="image/png" href="./ast/quill-desenhando-uma-linha.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <h2 id="insert">Gerar comprovante</h2>
+
+        <form action="">
+
+            <div class="input-field">
+                <input type="text" id="dataehora" placeholder="DD/MM/YYYY HH:mm:ss" class="txt" autocomplete="off">
+                <div class="underline"></div>
+            </div>
+
+            <div class="input-field">
+                <input type="text" id="barcode" placeholder="Código de Barras" class="txt" autocomplete="off">
+                <div class="underline"></div>
+            </div>
+
+            <div class="input-field">
+                <input type="text" id="datepag" placeholder="DD/MM/YYYY" class="txt" autocomplete="off">
+                <div class="underline"></div>
+            </div>
+
+            <div class="input-field">
+                <input type="text" id="Valor" class="Valor" placeholder="0,00" autocomplete="off">
+                <div class="underline"></div>
+            </div>
+            <div id="captcha">
+                <div class="h-captcha" data-sitekey="55738b75-e3e6-4df6-bae3-5021f82710ba" data-callback="enableButton"></div>
+            </div>
+            <input type="button" value="Gerar comprovante" onclick="modifyPdf()" id="botao" class="meu-botao1" disabled>
+        </form>
+        <div class="footer">
+            <span>preenchimento automatico:</span>
+            <label class="toggle-container">
+                <input type="checkbox" class="toggle-input" id="disableInput" checked>
+                <span class="toggle-slider"></span>
+            </label>
+        </div>
+    </main>
+    <script src="https://hcaptcha.com/1/api.js" async defer></script>
+    <script src="script.js"></script>
+</body>
+</html>

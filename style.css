@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    user-select: none;
+}
+
+body{
+    background-color: rgb(228, 224, 241);
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main.container{
+    position: absolute;
+    top: 20%;
+    min-width: 350px;
+    min-height: 40vh;
+    background-color: white;
+    padding: 2rem;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+main h2 {
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+.input-field{
+    position: relative;
+}
+
+#dataehora{
+    margin-bottom: 1rem;
+}  
+
+#barcode{
+    margin-bottom: 1rem;
+}
+
+#datepag{
+    margin-bottom: 1rem;
+}
+
+.input-field .underline::before{
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    left: 0;
+    top: 16px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.input-field .underline::after{
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    left: 0;
+    top: 16px;
+    background-color: rgba(37, 37, 37, 0.836);
+    transform: scaleX(0);
+}
+
+.input-field input:focus ~ .underline::after{
+    transform: scaleX(1);
+}
+
+.input-field input {
+    outline: none;
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.input-field input::placeholder{
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.txt{
+    width: 100%;
+}
+
+.Valor{
+    width: 100%;
+}
+
+.meu-botao1 {
+    margin-top: 0.7rem;
+    padding: 0.4rem;
+    background-color: rgb(175, 174, 164); /* cor padrão */
+    border: none;
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 0.9rem;
+    cursor: pointer;
+    border-radius: 2px;
+    background-image: linear-gradient(to left, rgb(165, 164, 154) 50%, rgb(175, 174, 164) 50%);
+    background-size: 200% 100%;
+}
+  
+.meu-botao1.ativo {
+    transition: background-position 1.5s cubic-bezier(0.6, 0, 0.2, 1); /* Transição com curva personalizada */
+    background-position: -100% 0;
+}
+
+/* Estilo básico do toggle switch */
+.toggle-container {
+  margin-left: 1rem;
+  display: inline-block;
+  position: relative;
+  width: 40px; /* Largura ajustada */
+  height: 20px; /* Altura ajustada */
+}
+
+.toggle-input {
+  display: none;
+}
+
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(175, 174, 164);
+  border-radius: 20px; /* Metade da altura para torná-lo circular */
+  transition: background-color 0.4s; /* Adicionada a transição de cor de fundo */
+}
+
+.toggle-slider:before {
+  position: absolute;
+  content: "";
+  height: 16px; /* Altura ajustada */
+  width: 16px; /* Largura ajustada */
+  left: 2px; /* Posição ajustada */
+  bottom: 2px; /* Posição ajustada */
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.4s; /* Adicionada a transição de transformação */
+}
+
+.toggle-input:checked + .toggle-slider {
+  background-color: rgb(212, 211, 197);
+}
+
+.toggle-input:checked + .toggle-slider:before {
+  transform: translateX(20px); /* Ajuste de posição */
+}
+
+
+.footer{
+    display: flex;
+    margin-top: 1rem;
+}
+
+.footer span{
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 0.9rem;
+}
+
+#captcha{
+    position: relative;
+    margin-top: 1rem;
+}
