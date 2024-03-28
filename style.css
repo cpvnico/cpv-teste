@@ -180,4 +180,5 @@ form{
     top: 20%;
     z-index: 10;
     transform: translateY(+920%) translateX(-118%);
+    pointer-events: none;
 }
